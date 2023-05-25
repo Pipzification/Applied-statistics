@@ -1,0 +1,7 @@
+This is the code for Applied Statistics EX2
+
+Part 1
+
+> ggplot(morley, aes(sample = Speed)) + stat_qq() + stat_qq_line()
+ + labs(title = 'Q-Q plot for the measurements of the speed of light.', x = 'Normal distribution values', y = 'Speed of light distribution')
+
