@@ -1,0 +1,24 @@
+Part 1
+
+a) df <- as.data.frame(treering)
+ggplot(df, aes(x=treering))+geom_histogram(fill='white', color='black')
++labs(title="A histogram of the width of treerings in Methuselah Walk", x= 'Width of treering', y='Number of treerings')
++theme_classic()
+
+b)summary(df)
+ggplot(df, aes(x=treering))+geom_boxplot()
++labs(title="A boxplot for the width of treerings in Methuselah Walk", x= 'Width of treering', y='Number of treerings')
++theme_classic()
+
+Part2
+
+> library(readxl)
+> guessinglengths <- read_excel("C:/Users/pipco/Downloads/guessinglengths.xlsx")
+> View(guessinglengths)
+> df <- as.data.frame(guessinglengths)
+> metres <- df[df$unit == 'metres', ]
+> feet <- df[df$unit == 'feet', ]
+> summary(metres)
+> summary(feet)
+> ggplot(df, aes(x=unit, y=guess)) + geom_boxplot()
+ +labs(title="A boxplot of guesses in meters verses guesses in feet", x= 'The unit of guess', y='Value of guess (m)')
